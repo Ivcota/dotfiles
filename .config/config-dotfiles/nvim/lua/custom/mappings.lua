@@ -12,6 +12,16 @@ M.nvimtree = {
   }
 }
 
+M.telescope = {
+  v = {
+    ["<leader>fg"] = { "<cmd> Telescope grep_string <CR>", "Live grep" },
+  },
+
+  n = {
+    ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+  }
+}
+
 M.lspconfig = {
   plugin = true,
   n = {
