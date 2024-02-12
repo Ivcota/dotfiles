@@ -12,6 +12,47 @@ M.nvimtree = {
   }
 }
 
+M.harpoon = {
+  n = {
+    ["<leader>a"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():append()
+      end,
+      "󱡁 Harpoon Add file",
+    },
+    ["<leader>h"] = { "<CMD>Telescope harpoon marks<CR>", "󱡀 Toggle quick menu" },
+    ["<leader>hb"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon.ui:toggle_quick_menu(harpoon:list())
+      end,
+      "󱠿 Harpoon Menu",
+    },
+    ["<C-t>"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():select(1)
+      end,
+      "󱪼 Navigate to file 1",
+    },
+    ["<C-n>"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():select(2)
+      end,
+      "󱪽 Navigate to file 2",
+    },
+    ["<C-m"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():select(3)
+      end,
+      "󱪾 Navigate to file 3",
+    },
+  },
+}
+
 M.telescope = {
   v = {
     ["<leader>fg"] = { "<cmd> Telescope grep_string <CR>", "Live grep" },
