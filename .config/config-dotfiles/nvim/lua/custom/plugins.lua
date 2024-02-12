@@ -125,7 +125,18 @@ local plugins = {
         dapui.close()
       end
     end
-  }
+  },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    event = "VeryLazy",
+    config = function(_, opts)
+      require('harpoon').setup(opts or {
+        save_on_toggle = true,
+      })
+    end,
+  },
 }
 
 return plugins
