@@ -86,6 +86,19 @@ M.lspconfig = {
       end,
       "LSP code action",
     },
+    ["<leader>gD"] = {
+      function()
+        vim.lsp.buf.declaration()
+      end,
+      "LSP declaration",
+    },
+
+    ["<leader>gd"] = {
+      function()
+        vim.lsp.buf.definition()
+      end,
+      "LSP declaration",
+    }
   }
 }
 
