@@ -3,6 +3,13 @@ local M = {}
 M.disabled = {
   n = {
     ["<leader>v"] = "",
+  },
+
+  i = {
+    ["<C-h>"] = "",
+    ["<C-l>"] = "",
+    ["<C-j>"] = "",
+    ["<C-k>"] = "",
   }
 }
 
@@ -11,6 +18,7 @@ M.nvimtree = {
     ["<leader>pv"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
   }
 }
+
 
 M.harpoon = {
   n = {
