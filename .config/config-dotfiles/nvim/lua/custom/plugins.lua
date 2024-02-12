@@ -1,5 +1,9 @@
 local plugins = {
   {
+    "f-person/git-blame.nvim",
+    lazy = false,
+  },
+  {
     "kdheepak/lazygit.nvim",
     lazy = false,
   },
